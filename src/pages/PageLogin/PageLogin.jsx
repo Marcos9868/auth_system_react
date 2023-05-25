@@ -1,31 +1,31 @@
-import { Form, Login } from './Styles';
+import { Actions, Field, Form, Input, Label, Login } from './Styles';
 
 const PageLogin = () => {
   return (
     <Login>
       <h1 className="title">Login System</h1>
       <Form>
-        <div className="field">
-          <label htmlFor="email"></label>
-          <input 
+        <Field>
+          <Label htmlFor="email">Email</Label>
+          <Input 
             type="email" 
             name="email" 
             id="email" 
             placeholder="Type your email" 
           />
-        </div>
-        <div className="field">
-          <label htmlFor="password"></label>
-          <input 
+        </Field>
+        <Field>
+          <Label htmlFor="password">Password</Label>
+          <Input 
             type="password" 
             name="password" 
             id="password" 
             placeholder="Type your password" 
           />
-        </div>
-        <div className="actions">
+        </Field>
+        <Actions>
           <button type="submit">Sign In</button>
-        </div>
+        </Actions>
       </Form>
     </Login>
   )
