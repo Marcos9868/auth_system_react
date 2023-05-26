@@ -1,13 +1,18 @@
-import { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import { useContext, useState } from 'react';
 import { Actions, Field, Form, Input, Label, Login } from './Styles';
+import { AuthContext } from '../../context/Auth';
 
 const PageLogin = () => {
+  const { authenticated, login } = useContext(AuthContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('submit', { email, password });
+    login(email, password);
   }
 
   return (
